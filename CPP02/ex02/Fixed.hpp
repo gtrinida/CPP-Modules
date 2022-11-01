@@ -6,7 +6,7 @@
 /*   By: gtrinida <gtrinida@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/23 16:38:53 by gtrinida          #+#    #+#             */
-/*   Updated: 2022/10/29 01:42:06 by gtrinida         ###   ########.fr       */
+/*   Updated: 2022/10/30 03:50:20 by gtrinida         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,9 @@ public:
     bool operator>(const Fixed &fixed) const;
 	bool operator<(const Fixed &fixed) const;
     Fixed   &operator++(void);
-    Fixed   &operator++(int);
+    Fixed   operator++(int);
     Fixed   &operator--(void);
-    Fixed   &operator--(int);
+    Fixed   operator--(int);
     Fixed   operator+(const Fixed &fixed);
     Fixed   operator-(const Fixed &fixed);
     Fixed   operator/(const Fixed &fixed);

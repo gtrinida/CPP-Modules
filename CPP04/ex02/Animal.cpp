@@ -20,10 +20,6 @@ Animal &Animal::operator=(const Animal &animal){
     return *this;
 }
 
-void Animal::makeSound() const {
-    std::cout << "*unrecognized sounds*" << std::endl;
-}
-
 std::string Animal::getType() const{
 	return type;
 }
