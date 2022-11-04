@@ -1,6 +1,6 @@
 NAME = ClapTrap
 CC = c++
-CFLAGS = -Wall -Werror -std=c++98 -g
+CFLAGS = -Wall -Wextra -Werror -std=c++98 -g
 INC = ClapTrap.hpp 
 SRC = main.cpp ClapTrap.cpp
 OBJS = $(SRC:.cpp=.o)

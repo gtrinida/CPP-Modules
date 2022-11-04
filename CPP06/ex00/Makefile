@@ -1,8 +1,8 @@
-NAME = Bureaucrat
+NAME = convert
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98 -g
-INC = Bureaucrat.hpp Form.hpp PresidentialPardonForm.hpp RobotomyRequestForm.hpp ShrubberyCreationForm.hpp
-SRC = main.cpp Bureaucrat.cpp Form.cpp PresidentialPardonForm.cpp RobotomyRequestForm.cpp ShrubberyCreationForm.cpp
+INC = Convert.hpp 
+SRC = main.cpp Convert.cpp
 OBJS = $(SRC:.cpp=.o)
 
 all: $(NAME)

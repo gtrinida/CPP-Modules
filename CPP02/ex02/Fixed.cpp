@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   Fixed.cpp                                          :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: gtrinida <gtrinida@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/23 16:38:51 by gtrinida          #+#    #+#             */
-/*   Updated: 2022/10/26 19:17:20 by gtrinida         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "Fixed.hpp"
 
 Fixed::Fixed() 
@@ -80,13 +68,13 @@ Fixed &Fixed::operator++(void)
     return *this;
 }
 
-Fixed &Fixed::operator++(int)
+Fixed Fixed::operator++(int)
 {
     value++;
     return *this;
 }
 
-Fixed &Fixed::operator--(int)
+Fixed Fixed::operator--(int)
 {
     value--;
     return *this;
