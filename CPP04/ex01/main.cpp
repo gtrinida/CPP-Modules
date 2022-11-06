@@ -8,6 +8,7 @@
 
 int	main(void)
 {
+	std::cout << "--------------------------" << std::endl;
     {
 		const Animal* animals[N_ANIMALS];
 		for (int i = 0; i < N_ANIMALS / 2; i++)
@@ -20,6 +21,7 @@ int	main(void)
 			delete animals[i];
 		}
 	}
+	std::cout << "--------------------------" << std::endl;
 	{
 		const Animal* j = new Dog();
 		const Animal* i = new Cat();
@@ -27,16 +29,18 @@ int	main(void)
 		delete j;
 		delete i;
 	}
+	std::cout << "--------------------------" << std::endl;
 	{
-		std::cout << "Deep test dog:" << std::endl;
+		std::cout << "Dog test:" << std::endl;
 		Dog basic;
 		{
 			Dog tmp = basic;
 			(void)tmp;
 		}
 	}
+	std::cout << "--------------------------" << std::endl;
 	{
-		std::cout << "Deep test cat:" << std::endl;
+		std::cout << "Cat test:" << std::endl;
 		Cat basic;
 		{
 			Cat tmp = basic;

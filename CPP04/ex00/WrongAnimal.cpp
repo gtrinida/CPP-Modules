@@ -17,7 +17,7 @@ WrongAnimal &WrongAnimal::operator=(const WrongAnimal &src)
 }
 
 WrongAnimal::~WrongAnimal(){
-    std::cout << "WrongAnimal destructor is called." << std::endl;
+    std::cout << "WrongAnimal destructor called." << std::endl;
 }
 
 void WrongAnimal::makeSound() const {

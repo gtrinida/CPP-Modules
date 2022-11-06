@@ -2,7 +2,7 @@
 
 Cat::Cat(){
     this->type = "Cat";
-    std::cout << "Cat defaul constructor called." << std::endl;   
+    std::cout << "Cat default constructor called." << std::endl;   
     _brain = new Brain();
 }
 
