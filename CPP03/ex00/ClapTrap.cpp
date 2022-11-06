@@ -54,7 +54,7 @@ void    ClapTrap::attack(const std::string &target){
         std::cout << name << ": can't attacs, no enegry points!" << std::endl;
         return ;
     }
-    std::cout << name << ": attacks the " << target;
+    std::cout << name << ": attacks " << target;
     std::cout << ", causing " << attackDamage << " points of damage!" << std::endl;
 }
 

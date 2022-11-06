@@ -13,7 +13,7 @@ ScavTrap::ScavTrap(std::string name)
     energyPoints = 50;
 }
 
-ScavTrap::ScavTrap(const ScavTrap& src)
+ScavTrap::ScavTrap(const ScavTrap& src) : ClapTrap(src)
 {
     std::cout << "ScavTrap copy constructor called." << std::endl;
     *this = src;
