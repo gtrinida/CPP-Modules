@@ -1,7 +1,7 @@
 #include  "ScavTrap.hpp"
 
 int main(void){
-
+    {
     std::cout << "\n-------FragTrap-------\n" << std::endl;
     FragTrap Ivan("Ivan");
     FragTrap Lesha("Lesha");
@@ -11,7 +11,8 @@ int main(void){
     Ivan.attack("Lesha");
     Lesha.takeDamage(20);
     Lesha.highFivesGuys();
-
+    }
+    {
     std::cout << "\n-------ScavTrap-------\n" << std::endl;
     ScavTrap PersonA("PersonA");
     ScavTrap PersonB("PersonB");
@@ -30,8 +31,8 @@ int main(void){
     PersonB.attack("PersonA");
     PersonA.takeDamage(20);
     PersonB.guardGate();
-
-
+    }
+    {
     std::cout << "\n-------ClapTrap-------\n" << std::endl;
     ClapTrap Cat("Cat");
     ClapTrap Dog("Dog");
@@ -39,4 +40,5 @@ int main(void){
     Cat.attack("Dog");
     Dog.takeDamage(0);
     Cat.beRepaired(0);
+    }
 }
