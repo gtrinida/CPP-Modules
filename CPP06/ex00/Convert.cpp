@@ -62,9 +62,7 @@ Convert::OrigType	Convert::checkOrigType() const
 	for (size_t i = 0; i < 5; i++)
 	{
 		if ((this->*isType[i])())
-		{
 			return static_cast<OrigType>(i);
-		}
 	}
 	return undefinedType;
 }
@@ -195,11 +193,6 @@ void	Convert::convertIntStr() const
 		std::cout << "Can't convert this INTEGER, because - UNDERFLOW" << std::endl;
 		return;
 	}
-	if (*end)
-	{
-		std::cout << "Can't convert this DOUBLE, because - ???" << std::endl;
-		return;
-	}
 	int intRes = static_cast<int>(longRes);
 	std::cout	<< std::fixed << std::setprecision(1)
 				<< "char: " << truncateToChar(intRes) << std::endl
@@ -226,20 +219,21 @@ void	Convert::convertFloatStr() const
 		std::cout << "Can't convert this FLOAT, because - UNDERFLOW" << std::endl;
 		return;
 	}
-	if (*end != 'f')
-	{
-		std::cout << "Can't convert this FLOAT, because - ???" << std::endl;
-		return;
-	}
 	if (std::isfinite(dbl))
 	{
-		if (dbl < -FLT_MAX || dbl > FLT_MAX)
+		if (dbl > FLT_MAX)
 		{
 			std::cout << "Can't convert this FLOAT, because - OVERFLOW" << std::endl;
 			return;
 		}
+		if (dbl < -FLT_MAX)
+		{
+			std::cout << "Can't convert this FLOAT, because - UNDERFLOW" << std::endl;
+			return;
+		}
 	}
 	float fltRes = static_cast<float>(dbl);
+	//какая-то ебала
 	if (ceilf(fltRes) == fltRes)
 	{
 		std::cout << std::fixed << std::setprecision(1);
@@ -265,11 +259,6 @@ void	Convert::convertDoubleStr() const
 	if (errno == ERANGE && fabs(dblRes) <= DBL_MIN)
 	{
 		std::cout << "Can't convert this DOUBLE, because - UNDERFLOW" << std::endl;
-		return;
-	}
-	if (*end)
-	{
-		std::cout << "Can't convert this DOUBLE, because - ???" << std::endl;
 		return;
 	}
 	if (ceil(dblRes) == dblRes)
