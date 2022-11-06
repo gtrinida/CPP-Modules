@@ -70,14 +70,16 @@ Fixed &Fixed::operator++(void)
 
 Fixed Fixed::operator++(int)
 {
+    Fixed tmp(*this);
     value++;
-    return *this;
+    return tmp;
 }
 
 Fixed Fixed::operator--(int)
 {
+    Fixed tmp(*this);
     value--;
-    return *this;
+    return tmp;
 }
 
 Fixed &Fixed::operator--(void)
