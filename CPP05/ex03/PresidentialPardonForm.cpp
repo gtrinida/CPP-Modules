@@ -7,11 +7,13 @@ Form("PresidentialPardonForm", 25, 5), _target(target){}
 
 PresidentialPardonForm::~PresidentialPardonForm(){}
 
-PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm& src) {
+PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm& src) 
+    : Form(src.getName(), src.getGradeToSign(), src.getGradeToExecute()), _target(src._target){
     *this = src;
 }
 
 PresidentialPardonForm& PresidentialPardonForm::operator=(const PresidentialPardonForm& src){
+    (void)src;
     return (*this);
 }
 

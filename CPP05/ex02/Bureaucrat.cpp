@@ -37,25 +37,7 @@ Bureaucrat& Bureaucrat::operator++(void) {
     return *this;
 }
 
-Bureaucrat Bureaucrat::operator++(int) {
-    if(_grade == MAX_GRADE){
-        std::cout << "You can't increase the grade, it's already maxed out!!!" << std::endl;
-        return *this;
-    }
-    _grade--;
-    return *this;
-}
-
 Bureaucrat& Bureaucrat::operator--(void) {
-    if(_grade == MIN_GRADE){
-        std::cout << "You can't decrease the grade, it's already the lowest!!!" << std::endl;
-        return *this;
-    }
-    ++_grade;
-    return *this;
-}
-
-Bureaucrat Bureaucrat::operator--(int) {
     if(_grade == MIN_GRADE){
         std::cout << "You can't decrease the grade, it's already the lowest!!!" << std::endl;
         return *this;

@@ -2,7 +2,9 @@
 
 Intern::Intern(){}
 
-Intern::Intern(const Intern& inter){}
+Intern::Intern(const Intern& inter){
+    *this = inter;
+}
 
 Intern::~Intern(){}
 
@@ -30,7 +32,7 @@ Form* Intern::makeForm(std::string name, std::string target){
         if (types[i] == name)
             FormIneed = form[i];
         else
-            delete form[i];  
+            delete form[i];
     }
     if (!FormIneed){
         std::cout << "Can't find " << "'" << name << "'" << " form, sorry." << std::endl;

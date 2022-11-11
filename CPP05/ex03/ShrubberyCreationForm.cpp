@@ -5,14 +5,16 @@ ShrubberyCreationForm::ShrubberyCreationForm(){}
 ShrubberyCreationForm::ShrubberyCreationForm(std::string target) : 
 Form("ShrubberyCreationForm", 145, 137), _target(target){}
 
-ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm& src) {
+ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm& src) 
+	: Form(src.getName(), src.getGradeToSign(), src.getGradeToExecute()), _target(src._target){
     *this = src;
 }
 
 ShrubberyCreationForm::~ShrubberyCreationForm(){}
 
 ShrubberyCreationForm& ShrubberyCreationForm::operator=(const ShrubberyCreationForm& src){
-    return (*this);
+    (void)src;
+	return (*this);
 }
 
 void ShrubberyCreationForm::execute(Bureaucrat const &executor) const {

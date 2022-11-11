@@ -3,7 +3,7 @@
 
 int main()
 {
-    std::cout << "-----Testing operators-----" << std::endl;
+    std::cout << "-----Testing grade-----" << std::endl;
     Bureaucrat Masha ("Masha", MAX_GRADE);
     std::cout << Masha;
     ++Masha;

@@ -8,11 +8,13 @@ Form("RobotomyRequestForm", 72, 45), _target(target){}
 
 RobotomyRequestForm::~RobotomyRequestForm(){}
 
-RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm& src) {
+RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm& src) 
+: Form(src.getName(), src.getGradeToSign(), src.getGradeToExecute()), _target(src._target){
     *this = src;
 }
 RobotomyRequestForm& RobotomyRequestForm::operator=(const RobotomyRequestForm& src){
-    return (*this);
+    (void)src;
+	return (*this);
 }
 
 void RobotomyRequestForm::execute(Bureaucrat const &executor) const

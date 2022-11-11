@@ -20,8 +20,6 @@ public:
     Bureaucrat& operator=(const Bureaucrat& src);
     Bureaucrat& operator++(void);
     Bureaucrat& operator--(void);
-    Bureaucrat operator++(int);
-    Bureaucrat operator--(int);
     std::string getName() const;
     int getGrade() const;
 

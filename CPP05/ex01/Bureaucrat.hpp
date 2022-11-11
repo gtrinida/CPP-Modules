@@ -22,8 +22,6 @@ public:
     Bureaucrat& operator=(const Bureaucrat& src);
     Bureaucrat& operator++(void);
     Bureaucrat& operator--(void);
-    Bureaucrat  operator++(int);
-    Bureaucrat  operator--(int);
 
     int         getGrade() const;
     void        signForm(Form &form) const;
