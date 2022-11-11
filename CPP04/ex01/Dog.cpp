@@ -5,7 +5,7 @@ Dog::Dog(){
     std::cout << "Dog defaul constructor called." << std::endl;   
     _brain = new Brain();
 }
-//не очень понял этот момент
+
 Dog::Dog(const Dog &src) : Animal(src){
     
     this->type = "Dog";
@@ -23,8 +23,9 @@ Dog &Dog::operator=(const Dog &dog)
 }
 
 Dog::~Dog(){
-    std::cout << "Dog destructor called." << std::endl;
     delete _brain; 
+    std::cout << "Dog destructor called." << std::endl;
+    
 }
 
 void Dog::makeSound() const {

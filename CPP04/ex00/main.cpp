@@ -27,5 +27,5 @@ int main()
     delete wrong;
     delete normal;
 
-    return (0);
+    return (0); 
 }
